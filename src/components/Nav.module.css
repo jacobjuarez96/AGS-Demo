@@ -1,0 +1,40 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3cqw;
+  z-index: 100;
+}
+
+.left_links {
+    display: flex;
+    align-items: center;
+}
+
+.logo_container {
+    height: 5rem;
+    width: 5rem;
+}
+.logo_container img {
+    height: 100%;
+    width: 100%;
+}
+
+.right_links {
+    display: flex;
+    gap: 3cqw;
+    padding-top: 1rem;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+}
+
+.link:hover {
+  color: #e4cab3; /* secondary color / hover */
+}

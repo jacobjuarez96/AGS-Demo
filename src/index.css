@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: white;
+  overscroll-behavior: none;
+}
+
+/* Global font and body defaults */
+body {
+  font-family: "neue-haas-grotesk-display", sans-serif; 
+  background-color: #FEFEFB;  
+}

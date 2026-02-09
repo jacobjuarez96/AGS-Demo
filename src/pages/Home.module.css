@@ -24,7 +24,7 @@
     padding: 4cqw;
 }
 
-h1 {
+.hero h1 {
     font-weight: 500;
     font-size: 4rem;
     text-shadow: #373737 0px 0 50px;
@@ -38,6 +38,16 @@ h1 {
     margin-top: 10rem;
     margin-bottom: 5rem;
 }
+
+/*                                                          */
+/*                                                          */
+/*                                                          */
+/*                                                          */
+/*         M I S S I O N                  S E C T I O N     */
+/*                                                          */
+/*                                                          */
+/*                                                          */
+/*                                                          */
 
 .mission {
     color: black;
@@ -55,8 +65,8 @@ h1 {
     padding: 10cqw 4cqw;
 }
 
-span {
-    color: #1b89d6;
+.mission_statement span {
+    color: #6B758E;
     font-weight: 500;
 }
 
@@ -79,6 +89,12 @@ span {
     color: #C2C2C2;
 }
 
+.service_overview ul {
+    list-style-type: none;
+    text-align: end;
+    line-height: 2;
+}
+
 /*                                                          */
 /*                                                          */
 /*                                                          */
@@ -91,44 +107,47 @@ span {
 
 .hero_highlights_container {
     border-top: 1px solid #bdbdbd;
-    border-bottom: solid #e3e3e3;
+    /* border-bottom: solid #e3e3e3; */
+    padding-bottom: 10rem;
 }
 
+
 .hero_highlights h2 {
-    font-weight: 100;
+    font-weight: 200;
     font-size: 3rem;
+    color: #999999;
 }
 
 .hero_highlights p {
     color: #746D6D;
 }
 
+.hero_highlights span {
+    color: black;
+}
+
 .highlights_title {
-    padding: 4cqw 4cqw;    
+    padding: 7cqw 0cqw 4cqw 4cqw;    
 }
 
 .highlights_content_container {
     display: flex;
     flex-direction: row;
+    padding: 0cqw 4cqw; 
 }
 
 .content_wrapper {
     display: flex;
     flex-direction: row;
-    border: 3px solid yellow;
     width: 100%;
-    padding: 0cqw 4cqw; 
-    justify-content: space-between;
-    gap:1rem;
+    gap: 1rem;
+    /* justify-content: space-between;
+    gap:1rem; */
 }
-
-
 
 .highlights_content{
     display: flex;
     flex-direction: column;
-    border: 2px solid brown;
-    width: 100%;
 }
 
 .highlights_content img {
@@ -138,33 +157,201 @@ span {
 }
 
 .highlight_image_1 {
-    height: 30rem;
-    border: 2px solid red;
+    width: 35rem;
 }
 
 .highlight_image_2 {
+    height: 50rem;
+}
+
+.highlight_image_3 {
+    width: 40rem;
+}
+
+.highlight_image_4 {
+    margin-top: 30rem;
     height: 60rem;
-    border: 2px solid red;
+}
+
+.highlight_comment {
+    margin-top: 20rem;
+}
+
+/*                                                          */
+/*                                                          */
+/*                                                          */
+/*                                                          */
+/*         V I E W          W O R K       S E C T I O N     */
+/*                                                          */
+/*                                                          */
+/*                                                          */
+/*                                                          */
+
+.view_work_container, .view_clients_container {
+    border-top: 1px solid #bdbdbd;
+    /* border-bottom: solid #e3e3e3; */
+    padding: 10cqw 4cqw;
+}
+
+.view_work_wrapper, .view_clients_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.view_work_content_container {
+    display: flex;
+    align-items: center;
+}
+
+/* .view_work_content_container h2, .view_clients_container h2{
+    font-weight: 600;
+    color: #303030;
+    font-size: 3rem;
+} */
+
+.view_work_content_container p {
+    font-size: 1.5rem;
+}
+
+.black_button {
+    background-color: black;
+    color: white;
+    padding: 1rem 2rem;
+    cursor: pointer;
 }
 
 
-/*
-.section-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;  Two equal columns 
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
+/*                                                          */
+/*                                                          */
+/*                                                          */
+/*                                                          */
+/*        V I E W       C L I E N T S     S E C T I O N     */
+/*                                                          */
+/*                                                          */
+/*                                                          */
+/*                                                          */
+
+.view_clients_wrapper{
+    justify-content: space-evenly;
 }
 
-.left-column {
-  padding: 60px;
-  border-right: 1px solid #333; /* The vertical separator 
+.client_container {
+    height: 15rem;
+    width: 25rem;
+    border: 2px solid rgb(226, 226, 226);
+    border-radius: 1px;
+    margin: 3cqw 0cqw;
 }
 
-.right-column {
-  padding: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; /* Aligns the list to the right like your Figma 
+.client_container img{
+    height: 100%;
+    width: 100%;
+    padding: 4cqw;
 }
-*/
+
+/*                                                          */
+/*                                                          */
+/*                                                          */
+/*                                                          */
+/*        H E R O     C L O S I N G    S E C T I O N        */
+/*                                                          */
+/*                                                          */
+/*                                                          */
+/*                                                          */
+
+.hero_closing_container {
+    border-top: 1px solid #bdbdbd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hero_closing_wrapper {
+    
+    padding: 4cqw;
+}
+
+.closing_images_container {
+    /* border: 1px solid orange; */
+}
+
+.closing_info_container {
+    /* border: 1px solid green; */
+}
+
+.hero_closing_container {
+    border-top: 1px solid #bdbdbd;
+    display: flex;
+}
+
+/*                                                          */
+/*        C L O S I N G            L E F T                  */
+/*                                                          */
+
+.closing_container_left {
+    width: 50%;
+    padding: 4cqw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.closing_images_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.closing_images_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.closing_image {
+    height: 20rem;
+    width: 22cqw;
+    background-color: #373737;
+    margin: 1px;
+}
+
+.closing_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*                                                          */
+/*        C L O S I N G           R I G H T                 */
+/*                                                          */
+
+.closing_container_right {
+    width: 50%;
+    background-color: rgb(242, 242, 242);
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    justify-content: flex-end;
+    border-left: 1px solid #bdbdbd;
+}
+
+.closing_container_right p {
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
+.right_row_wrapper {
+    padding: 4cqw;
+}
+
+.container_right_contact_container {
+    display: flex;
+    padding: 1cqw 4cqw;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #bdbdbd;
+}
+
+.container_right_contact_container h5 {
+    font-size: 1.2rem;
+    font-weight: 200;
+}

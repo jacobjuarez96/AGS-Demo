@@ -16,6 +16,10 @@
 .logo_container {
     height: 5rem;
     width: 5rem;
+    height: 10cqw;
+    width: 10cqw;
+    max-width: 7rem;
+    max-height: 7rem;
 }
 .logo_container img {
     height: 100%;

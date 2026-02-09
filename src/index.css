@@ -14,3 +14,9 @@ body {
   font-family: "neue-haas-grotesk-display", sans-serif; 
   background-color: #FEFEFB;  
 }
+
+h2 {
+  font-weight: 500;
+  color: #303030;
+  font-size: 3rem;
+}

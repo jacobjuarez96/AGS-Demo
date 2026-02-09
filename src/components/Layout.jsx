@@ -12,6 +12,9 @@ function Layout({ children }) {
       </main>
 
       <footer style={styles.footer}>
+        <div style={styles.footer_main}>
+
+        </div>
         &copy; {new Date().getFullYear()} Apex Graphic Solutions
       </footer>
     </div>
@@ -31,8 +34,8 @@ const styles = {
   footer: {
     textAlign: 'center',
     padding: '15px 0',
-    backgroundColor: '#11544a',
-    color: '#fff',
+    color: '#d4d4d4',
+    borderTop: '1px solid #bdbdbd'
   },
 }
 

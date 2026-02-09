@@ -1,0 +1,7 @@
+.solution_page {
+    background-color: #111624;
+    min-height: 100vh;
+    max-height: fit-content;
+    padding: 12cqw 4cqw 0cqw 4cqw;
+    color: white;
+}

@@ -414,6 +414,10 @@
     .highlight_image_3 {
         align-self: center;
     }
+
+    .content_wrapper {
+        overflow: hidden;
+    }
   
 }
 

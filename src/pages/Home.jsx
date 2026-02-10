@@ -116,7 +116,7 @@ function Home() {
                 <div className={styles.highlight_image_3}>
                   <img src={image_3} alt='football frame'></img>
                 </div>
-                <p>privacy windows</p>
+                <p>back-lit fabric frames</p>
 
                 <div className={styles.highlight_comment}>
                   <h2>
@@ -159,7 +159,7 @@ function Home() {
 
       <section className={styles.view_clients_container}>
 
-        <h2>A sample of clients</h2>
+        <h2>A sample of our clients</h2>
 
         <div className={styles.view_clients_wrapper}>
           <div className={styles.view_work_content_container}>

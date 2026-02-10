@@ -20,6 +20,8 @@
     width: 10cqw;
     max-width: 7rem;
     max-height: 7rem;
+    min-height: 4rem;
+    min-width: 4rem;
 }
 .logo_container img {
     height: 100%;

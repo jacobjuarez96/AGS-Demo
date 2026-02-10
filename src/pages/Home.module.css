@@ -69,12 +69,12 @@
 
 .mission_statement span {
     color: #6B758E;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .mission_statement h2 {
-    font-weight: 100;
-    font-size: clamp(12px, 4cqw, 3rem);
+    font-weight: 200 !important;
+    font-size: clamp(12px, 5cqw, 3rem);
 
 }
 
@@ -221,6 +221,7 @@
     color: white;
     padding: 1rem 2rem;
     cursor: pointer;
+    min-width: 20cqh;
 }
 
 
@@ -405,6 +406,7 @@
     .client_container {
         height: 9rem;
         width: 12rem;
+        border: 0px;
     }
 
     .closing_container_left, .closing_container_right {
@@ -418,6 +420,18 @@
     .content_wrapper {
         overflow: hidden;
     }
+
+    .view_work_content_container h2 {
+        display: none;
+    }
+
+    .view_work_content_container p {
+            font-size: clamp(12px, 5vw, 3rem);
+    }
   
+    .closing_container_right p {
+        font-weight: 200 !important;
+        font-size: clamp(12px, 5cqw, 3rem);
+    }
 }
 

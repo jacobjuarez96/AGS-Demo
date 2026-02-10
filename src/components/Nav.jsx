@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import styles from './Nav.module.css'
-import logo from './../assets/APEX LOGO-01.svg';
+import logo from './../assets/ags-logo-black.svg';
 
 function Nav() {
   return (

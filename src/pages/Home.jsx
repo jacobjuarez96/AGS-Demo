@@ -1,4 +1,7 @@
 import styles from "./Home.module.css";
+
+import { Link } from "react-router-dom";
+
 import image_1 from "../assets/highlight_image_1.png"
 import image_2 from "../assets/highlight_image_2.jpg"
 import image_3 from "../assets/highlight_image_3.jpg"
@@ -29,9 +32,9 @@ function Home() {
             <h1>Aligning vision <br></br>and action</h1>
           </div>
 
-          <div className={styles.action_button}>
+          <Link to="/contact" className={styles.action_button}>
             <p>reach out to our team</p>
-          </div>
+          </Link>
 
         </div>
       </section>
@@ -259,13 +262,16 @@ function Home() {
 
           <div className={styles.container_right_row}>
 
-            
+
             <div className={styles.container_right_contact_container}>
-              
+
               <h5>Reach out to us</h5>
-              <div className={styles.black_button}>
+              <Link
+                to="/contact"
+                className={styles.black_button}
+              >
                 contact
-              </div>
+              </Link>
             </div>
 
 
@@ -275,9 +281,12 @@ function Home() {
           <div className={styles.container_right_row}>
             <div className={styles.container_right_contact_container}>
               <h5>View our services</h5>
-              <div className={styles.black_button}>
+              <Link
+                to="/services"
+                className={styles.black_button}
+              >
                 services
-              </div>
+              </Link>
             </div>
           </div>
         </div>

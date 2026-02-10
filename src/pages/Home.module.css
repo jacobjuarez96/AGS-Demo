@@ -15,6 +15,8 @@
 .overlay {
   position: absolute;
   inset: 0;
+  height: 100%;
+  width: 100%;
   background: rgba(0, 0, 0, 0.4);
 }
 
@@ -72,7 +74,8 @@
 
 .mission_statement h2 {
     font-weight: 100;
-    font-size: 3rem;
+    font-size: clamp(12px, 4cqw, 3rem);
+
 }
 
 .vertical_divider {
@@ -85,7 +88,7 @@
 
 .service_overview h3 {
     font-weight: 600;
-    font-size: 2rem;
+    font-size: clamp(12px, 5cqw, 2rem);
     color: #C2C2C2;
 }
 
@@ -108,13 +111,13 @@
 .hero_highlights_container {
     border-top: 1px solid #bdbdbd;
     /* border-bottom: solid #e3e3e3; */
-    padding-bottom: 10rem;
+    padding-bottom: 8cqw;
 }
 
 
 .hero_highlights h2 {
     font-weight: 200;
-    font-size: 3rem;
+    font-size: clamp(12px,5vw,3rem);
     color: #999999;
 }
 
@@ -157,20 +160,20 @@
 }
 
 .highlight_image_1 {
-    width: 35rem;
+    width: clamp(300px, 29rem, 35rem);
 }
 
 .highlight_image_2 {
-    height: 50rem;
+    height: clamp(100px, 50rem,40cqw);
 }
 
 .highlight_image_3 {
-    width: 40rem;
+    width: clamp(300px, 29rem, 35rem);
 }
 
 .highlight_image_4 {
     margin-top: 30rem;
-    height: 60rem;
+    height: clamp(100px, 50rem,40cqw);
 }
 
 .highlight_comment {
@@ -309,7 +312,7 @@
 
 .closing_image {
     height: 20rem;
-    width: 22cqw;
+    width: clamp(22cqw);
     background-color: #373737;
     margin: 1px;
 }
@@ -354,3 +357,63 @@
     font-size: 1.2rem;
     font-weight: 200;
 }
+
+@media (max-width: 768px) {
+    .mission {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .mission_statement h2 {
+    font-weight: 100;
+    }
+
+    .mission_statement {
+        width: 100%;
+    }
+
+    .service_overview {
+        padding: 0 4cqw;
+    }
+
+    .service_overview ul{
+        text-align: center;
+    }
+
+    .vertical_divider {
+    width: 100%;
+    border: 1px dashed #FABD2A;
+    }
+
+    .content_wrapper {
+        flex-direction: column;
+    }
+
+    .highlight_comment {
+        margin-top: 1rem;
+    }
+
+    .hero_closing_container {
+        flex-direction: column;
+    }
+
+    .highlight_image_4 {
+        margin-top: 0;
+    }
+
+    .client_container {
+        height: 9rem;
+        width: 12rem;
+    }
+
+    .closing_container_left, .closing_container_right {
+        width: 100%;
+    }
+
+    .highlight_image_3 {
+        align-self: center;
+    }
+  
+}
+

@@ -18,6 +18,14 @@ import frame4 from "../assets/gallery-images/frame4.jpg"
 import exterior1 from "../assets/gallery-images/exterior1.jpg"
 import exterior2 from "../assets/gallery-images/exterior2.jpg"
 import exterior3 from "../assets/gallery-images/exterior3.jpg"
+import lettering1 from "../assets/gallery-images/lettering1.jpg"
+import lettering2 from "../assets/gallery-images/lettering2.jpg"
+import lettering3 from "../assets/gallery-images/lettering3.jpg"
+import lettering4 from "../assets/gallery-images/lettering4.jpg"
+import lettering5 from "../assets/gallery-images/lettering5.jpg"
+import lettering6 from "../assets/gallery-images/lettering6.jpg"
+
+
 
 
 
@@ -55,6 +63,11 @@ export default function Work() {
         <GallerySection
           title="Exterior Work"
           images={[exterior1, exterior2, exterior3]}
+        />
+
+        <GallerySection
+          title="Dimensional Lettering"
+          images={[lettering1, lettering2, lettering3, lettering4, lettering5, lettering6]}
         />
 
       </div>

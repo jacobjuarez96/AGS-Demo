@@ -1,0 +1,35 @@
+.workPage {
+  width: 100%;
+}
+
+/* ===== Banner ===== */
+
+.banner {
+  position: relative;
+  height: 60vh;
+  background-image: url("./../assets/banner-image.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.banner h1 {
+  position: relative;
+  color: white;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.content {
+  padding: 5rem 8%;
+}

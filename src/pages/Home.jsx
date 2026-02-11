@@ -151,9 +151,12 @@ function Home() {
             <p>Discover the results of our collaborations</p>
           </div>
           <div className={styles.view_work_content_container}>
-            <div className={styles.black_button}>
-              view our portfolio
-            </div>
+            <Link
+                to="/work"
+                className={styles.black_button}
+              >
+                view our portfolio
+                </Link>
           </div>
         </div>
       </section>

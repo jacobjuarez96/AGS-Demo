@@ -21,6 +21,7 @@
 .imageWrapper {
   overflow: hidden;
   border-radius: 1px;
+  cursor: pointer;
   /* aspect-ratio: 4 / 3; */
 }
 
@@ -45,4 +46,46 @@
 /* 👇 Keep hover effect */
 .imageWrapper:hover .image {
   transform: scale(1.05);
+}
+
+/* ===== Lightbox ===== */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.lightboxImage {
+  max-width: 90%;
+  max-height: 85%;
+  object-fit: contain;
+  border-radius: 4px;
+  cursor: default;
+}
+
+.close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.lightbox {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

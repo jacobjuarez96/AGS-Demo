@@ -2,6 +2,27 @@
     background-color: #111624;
     min-height: 100vh;
     max-height: fit-content;
-    padding: 12cqw 4cqw 0cqw 4cqw;
+    
     color: white;
+}
+
+.solution_hero {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(245, 0, 0);
+    height: 100vh;
+}
+
+.vertical_divider {
+    border: 1px solid white;
+}
+
+.hero_left {
+    padding: 20cqw 5cqw 5cqw 4cqw;
+    width: 100%;
+}
+
+.hero_right {
+    padding: 20cqw 5cqw 5cqw 4cqw;
+    width: 50%;
 }

@@ -146,3 +146,43 @@
     transform: translateY(-80px) scale(0.95);
   }
 }
+.lightboxImage {
+  max-width: 90%;
+  max-height: 85%;
+  object-fit: contain;
+  border-radius: 6px;
+  cursor: default;
+
+  transform: scale(0.95);
+  animation: zoomIn 0.25s ease forwards;
+}
+
+@keyframes zoomIn {
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Swipe closing animations */
+
+.closing-down {
+  animation: slideDown 0.25s ease forwards;
+}
+
+.closing-up {
+  animation: slideUp 0.25s ease forwards;
+}
+
+@keyframes slideDown {
+  to {
+    opacity: 0;
+    transform: translateY(120px) scale(0.95);
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 0;
+    transform: translateY(-120px) scale(0.95);
+  }
+}

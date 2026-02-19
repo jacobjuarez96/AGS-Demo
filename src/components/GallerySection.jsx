@@ -1,51 +1,54 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "./GallerySection.module.css";
 
 export default function GallerySection({ title, images }) {
   const [selectedImage, setSelectedImage] = useState(null);
   const [isClosing, setIsClosing] = useState(false);
-  const [scrollDirection, setScrollDirection] = useState(null);
+  const [swipeDirection, setSwipeDirection] = useState(null);
+
+  const touchStartY = useRef(0);
+  const touchEndY = useRef(0);
 
   const closeLightbox = () => {
-  setIsClosing(true);
+    setIsClosing(true);
 
-  // Keep body locked during animation
-  document.body.style.overflow = "hidden";
-
-  setTimeout(() => {
-    setSelectedImage(null);
-    setIsClosing(false);
-    setScrollDirection(null);
-
-    // Small delay to let scroll momentum die
     setTimeout(() => {
-      document.body.style.overflow = "auto";
-    }, 50);
-  }, 250);
-};
+      setSelectedImage(null);
+      setIsClosing(false);
+      setSwipeDirection(null);
+    }, 250); // must match CSS animation duration
+  };
 
-
-  // Scroll lock + Escape key
+  // Lock body scroll when lightbox is open
   useEffect(() => {
     if (selectedImage) {
       document.body.style.overflow = "hidden";
-
-      const handleKeyDown = (e) => {
-        if (e.key === "Escape") {
-          closeLightbox();
-        }
-      };
-
-      window.addEventListener("keydown", handleKeyDown);
-
-      return () => {
-        document.body.style.overflow = "auto";
-        window.removeEventListener("keydown", handleKeyDown);
-      };
     } else {
       document.body.style.overflow = "auto";
     }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [selectedImage]);
+
+  // Swipe handlers (mobile only)
+  const handleTouchStart = (e) => {
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = () => {
+    const distance = touchEndY.current - touchStartY.current;
+
+    if (Math.abs(distance) > 70) {
+      setSwipeDirection(distance > 0 ? "down" : "up");
+      closeLightbox();
+    }
+  };
 
   return (
     <>
@@ -68,16 +71,9 @@ export default function GallerySection({ title, images }) {
         <div
           className={styles.lightbox}
           onClick={closeLightbox}
-          onWheel={(e) => {
-            e.preventDefault(); // stop scroll from reaching body
-            e.stopPropagation();
-
-            if (!isClosing) {
-              setScrollDirection(e.deltaY > 0 ? "down" : "up");
-              closeLightbox();
-            }
-          }}
-
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           <span
             className={styles.close}
@@ -89,8 +85,11 @@ export default function GallerySection({ title, images }) {
           <img
             src={selectedImage}
             alt="Expanded work"
-            className={`${styles.lightboxImage} 
-              ${isClosing ? styles[`closing-${scrollDirection}`] : ""}`}
+            className={`${styles.lightboxImage} ${
+              isClosing && swipeDirection
+                ? styles[`closing-${swipeDirection}`]
+                : ""
+            }`}
             onClick={(e) => e.stopPropagation()}
           />
         </div>

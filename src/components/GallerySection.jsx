@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import styles from "./GallerySection.module.css";
 
 export default function GallerySection({ title, images }) {
@@ -24,37 +24,38 @@ export default function GallerySection({ title, images }) {
     }, 250); // match CSS animation duration
   };
 
-  const goNext = () => {
-    setSelectedIndex((prev) =>
-      prev === images.length - 1 ? 0 : prev + 1
-    );
-  };
+  const goNext = useCallback(() => {
+  setSelectedIndex((prev) =>
+    prev === images.length - 1 ? 0 : prev + 1
+  );
+}, [images.length]);
 
-  const goPrev = () => {
-    setSelectedIndex((prev) =>
-      prev === 0 ? images.length - 1 : prev - 1
-    );
-  };
+const goPrev = useCallback(() => {
+  setSelectedIndex((prev) =>
+    prev === 0 ? images.length - 1 : prev - 1
+  );
+}, [images.length]);
 
   // Lock scroll + keyboard nav
   useEffect(() => {
-    if (selectedIndex !== null) {
-      document.body.style.overflow = "hidden";
+  if (selectedIndex !== null) {
+    document.body.style.overflow = "hidden";
 
-      const handleKeyDown = (e) => {
-        if (e.key === "Escape") closeLightbox();
-        if (e.key === "ArrowRight") goNext();
-        if (e.key === "ArrowLeft") goPrev();
-      };
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowRight") goNext();
+      if (e.key === "ArrowLeft") goPrev();
+    };
 
-      window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
 
-      return () => {
-        document.body.style.overflow = "auto";
-        window.removeEventListener("keydown", handleKeyDown);
-      };
-    }
-  }, [selectedIndex]);
+    return () => {
+      document.body.style.overflow = "auto";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }
+}, [selectedIndex, goNext, goPrev]);
+
 
   // Swipe handlers
   const handleTouchStart = (e) => {

@@ -438,3 +438,28 @@
     }
 }
 
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.nav:hover {
+  opacity: 1;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}

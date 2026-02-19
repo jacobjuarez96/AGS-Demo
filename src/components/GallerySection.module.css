@@ -34,7 +34,7 @@
 
   opacity: 0;
   transform: scale(1.02);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 2s ease, transform 2s ease;
 }
 
 /* 👇 When loaded */
@@ -82,7 +82,7 @@
 }
 
 .lightbox {
-  animation: fadeIn 0.3s ease forwards;
+  animation: fadeIn 0.125s ease forwards;
 }
 
 @keyframes fadeIn {

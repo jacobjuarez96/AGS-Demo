@@ -1,6 +1,6 @@
 .hero {
   min-height: 100vh;               /* full viewport height */
-  background-image: url("../assets/hero_image.png");
+  background-image: url("../assets/hero_image.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

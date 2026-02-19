@@ -1,18 +1,19 @@
 import styles from "./Work.module.css";
 import GallerySection from "../components/GallerySection";
-import privacy1 from "../assets/gallery-images/privacy1.jpg";
-import privacy2 from "../assets/gallery-images/privacy2.jpg";
-import privacy3 from "../assets/gallery-images/privacy3.jpg";
-import vinyl1 from "../assets/gallery-images/vinyl1.jpg"
-import vinyl2 from "../assets/gallery-images/vinyl2.jpg"
-import vinyl3 from "../assets/gallery-images/vinyl3.jpg"
-import vinyl4 from "../assets/gallery-images/vinyl4.jpg"
-import vinyl5 from "../assets/gallery-images/vinyl5.jpg"
-import vinyl6 from "../assets/gallery-images/vinyl6.jpg"
-import vinyl7 from "../assets/gallery-images/vinyl7.jpg"
-import vinyl8 from "../assets/gallery-images/vinyl8.jpg"
 
-
+import privacy1 from "../assets/gallery-resized/privacy1.webp";
+import privacy2 from "../assets/gallery-resized/privacy2.webp";
+import privacy3 from "../assets/gallery-resized/privacy3.webp";
+import privacy4 from "../assets/gallery-resized/privacy4.webp";
+import privacy5 from "../assets/gallery-resized/privacy5.webp";
+import vinyl1 from "../assets/gallery-resized/vinyl1.webp"
+import vinyl2 from "../assets/gallery-resized/vinyl2.webp"
+import vinyl3 from "../assets/gallery-resized/vinyl3.webp"
+import vinyl4 from "../assets/gallery-resized/vinyl4.webp"
+import vinyl5 from "../assets/gallery-resized/vinyl5.webp"
+import vinyl6 from "../assets/gallery-resized/vinyl6.webp"
+import vinyl7 from "../assets/gallery-resized/vinyl7.webp"
+import vinyl8 from "../assets/gallery-resized/vinyl8.webp"
 import frame1 from "../assets/gallery-resized/frame1.webp"
 import frame2 from "../assets/gallery-resized/frame2.webp"
 import frame3 from "../assets/gallery-resized/frame3.webp"
@@ -26,11 +27,6 @@ import lettering3 from "../assets/gallery-resized/lettering3.webp"
 import lettering4 from "../assets/gallery-resized/lettering4.webp"
 import lettering5 from "../assets/gallery-resized/lettering5.webp"
 import lettering6 from "../assets/gallery-resized/lettering6.webp"
-
-
-
-
-
 
 
 
@@ -49,7 +45,7 @@ export default function Work() {
 
         <GallerySection
           title="Privacy Windows"
-          images={[privacy1, privacy2, privacy3]}
+          images={[privacy1, privacy2, privacy3, privacy4, privacy5]}
         />
 
         <GallerySection

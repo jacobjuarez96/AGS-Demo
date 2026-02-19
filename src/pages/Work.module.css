@@ -7,8 +7,7 @@
 .banner {
   position: relative;
   height: 60vh;
-  background-image: url("./../assets/banner-image.jpg");
-  background-image: url("./../assets/banner2.jpg");
+  background-image: url("./../assets/banner2.webp");
   background-size: cover;
   background-position: center;
   display: flex;

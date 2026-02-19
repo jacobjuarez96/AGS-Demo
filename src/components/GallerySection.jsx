@@ -1,8 +1,51 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./GallerySection.module.css";
 
 export default function GallerySection({ title, images }) {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [isClosing, setIsClosing] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState(null);
+
+  const closeLightbox = () => {
+  setIsClosing(true);
+
+  // Keep body locked during animation
+  document.body.style.overflow = "hidden";
+
+  setTimeout(() => {
+    setSelectedImage(null);
+    setIsClosing(false);
+    setScrollDirection(null);
+
+    // Small delay to let scroll momentum die
+    setTimeout(() => {
+      document.body.style.overflow = "auto";
+    }, 50);
+  }, 250);
+};
+
+
+  // Scroll lock + Escape key
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = "hidden";
+
+      const handleKeyDown = (e) => {
+        if (e.key === "Escape") {
+          closeLightbox();
+        }
+      };
+
+      window.addEventListener("keydown", handleKeyDown);
+
+      return () => {
+        document.body.style.overflow = "auto";
+        window.removeEventListener("keydown", handleKeyDown);
+      };
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [selectedImage]);
 
   return (
     <>
@@ -21,15 +64,24 @@ export default function GallerySection({ title, images }) {
         </div>
       </section>
 
-      {/* Lightbox */}
       {selectedImage && (
         <div
           className={styles.lightbox}
-          onClick={() => setSelectedImage(null)}
+          onClick={closeLightbox}
+          onWheel={(e) => {
+            e.preventDefault(); // stop scroll from reaching body
+            e.stopPropagation();
+
+            if (!isClosing) {
+              setScrollDirection(e.deltaY > 0 ? "down" : "up");
+              closeLightbox();
+            }
+          }}
+
         >
           <span
             className={styles.close}
-            onClick={() => setSelectedImage(null)}
+            onClick={closeLightbox}
           >
             ×
           </span>
@@ -37,7 +89,8 @@ export default function GallerySection({ title, images }) {
           <img
             src={selectedImage}
             alt="Expanded work"
-            className={styles.lightboxImage}
+            className={`${styles.lightboxImage} 
+              ${isClosing ? styles[`closing-${scrollDirection}`] : ""}`}
             onClick={(e) => e.stopPropagation()}
           />
         </div>

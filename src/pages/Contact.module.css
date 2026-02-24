@@ -78,7 +78,18 @@
         grid-template-columns: 0;
     }
 
+    .contactLeft {
+      padding: 0;
+      height: 0px;
+    }
+
+    .contactLeft h1, .contactLeft p {
+      display: none;
+      padding: 0;
+    }
+
     .contactGrid {
         grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: max-content;
     }
 }

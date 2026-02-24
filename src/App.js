@@ -5,10 +5,12 @@ import Services from './pages/Services'
 import Contact from './pages/Contact'
 import Work from './pages/Work'
 import Solutions from './pages/Solutions'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <Layout>
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />

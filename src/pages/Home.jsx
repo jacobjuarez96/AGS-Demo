@@ -2,20 +2,22 @@ import styles from "./Home.module.css";
 
 import { Link } from "react-router-dom";
 
-import image_1 from "../assets/highlight_image_1.png"
-import image_2 from "../assets/highlight_image_2.jpg"
-import image_3 from "../assets/highlight_image_3.jpg"
-import image_4 from "../assets/highlight_image_4.png"
+import image_1 from "../assets/highlight1.webp"
+import image_2 from "../assets/highlight2.webp"
+import image_3 from "../assets/highlight3.webp"
+import image_4 from "../assets/highlight4.webp"
+
 import client_logo_1 from "../assets/client-logos/academy-logo.svg"
 import client_logo_2 from "../assets/client-logos/in-n-out-logo.svg"
 import client_logo_3 from "../assets/client-logos/amazon-logo.svg"
 import client_logo_4 from "../assets/client-logos/ut-logo.svg"
 import client_logo_5 from "../assets/client-logos/sprint-logo.svg"
 import client_logo_6 from "../assets/client-logos/google-logo.svg"
-import closer_1 from "../assets/closing-images/closer_1.jpg"
-import closer_2 from "../assets/closing-images/closer_2.png"
-import closer_3 from "../assets/closing-images/closer_3.jpg"
-import closer_4 from "../assets/closing-images/closer_4.jpg"
+
+import closer_1 from "../assets/closing-images/closer_1.webp"
+import closer_2 from "../assets/closing-images/closer_2.webp"
+import closer_3 from "../assets/closing-images/closer_3.webp"
+import closer_4 from "../assets/closing-images/closer_4.webp"
 
 
 

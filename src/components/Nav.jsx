@@ -54,6 +54,8 @@ function Nav() {
       <div className={styles.right_links}>
         <Link to="/work" className={styles.link}>work</Link>
         <Link to="/contact" className={styles.link}>contact</Link>
+        <Link to="/about" className={styles.link}>about us</Link>
+
       </div>
 
       {/* Hamburger */}
@@ -70,6 +72,7 @@ function Nav() {
       <div className={`${styles.mobile_menu} ${isOpen ? styles.show : ""}`}>
         <Link to="/work" className={styles.mobile_link} onClick={() => setIsOpen(false)}>work</Link>
         <Link to="/contact" className={styles.mobile_link} onClick={() => setIsOpen(false)}>contact</Link>
+        <Link to="/about" className={styles.mobile_link} onClick={() => setIsOpen(false)}>about us</Link>
       </div>
 
     </nav>

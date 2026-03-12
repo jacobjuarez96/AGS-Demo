@@ -206,7 +206,7 @@ function Home() {
                 <div className={styles.highlight_image_4}>
                   <img src={image_4} alt="ut stadium" />
                 </div>
-                <p>Academy Sports Wall Interior 2025</p>
+                <p>UT Athletic Complex</p>
               </div>
             </div>
           </div>
